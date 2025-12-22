@@ -1,4 +1,4 @@
-package main 
+package main
 
 import (
 	"fmt"
@@ -7,7 +7,7 @@ import (
 
 func count(s string) {
 	for i := 1; i < 5; i++ {
-	
+
 		fmt.Printf("%s: %d\n", s, i)
 		time.Sleep(time.Second * 5)
 	}

@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	var length int 
+	var length int
 	var width int
 
 	fmt.Print("input your length: ")

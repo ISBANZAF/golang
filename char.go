@@ -1,16 +1,16 @@
-package main 
+package main
 
 import "fmt"
 
 type user struct {
-	name    string
-	age     int
-	Active  bool 
+	name   string
+	age    int
+	Active bool
 }
 
 func main() {
-	player := user {
-		name:  "",
+	player := user{
+		name:   "",
 		age:    21,
 		Active: true,
 	}
