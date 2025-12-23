@@ -12,11 +12,14 @@ func main() {
 	secret := rand.Intn(100) + 1
 
 	var guess int
+	fmt.Println("LEVEL 1")
 	fmt.Print("Guess the number (1 to 100): ")
 	fmt.Scanln(&guess)
+	time.Sleep(time.Second * 2)
 
+	level := 1
 	chance := 5
-
+	levelnum := 100
 	for chance > 0 {
 		if guess != secret {
 
@@ -27,6 +30,7 @@ func main() {
 	}
 			fmt.Println("try again: ")
 			fmt.Scanln(&guess)
+			time.Sleep(time.Second * 1)
 		}
 
 		chance --
@@ -35,8 +39,9 @@ func main() {
 
 		if guess == secret {
 			fmt.Println("Congratulatons The Number is:", guess, "\n")
-
-			fmt.Println("moving to the next level!\n this will now add 50 to the former maximum number")
+			level ++
+			levelnum += 50
+			fmt.Printf("moving to LEVEL %d!\nwhich will be %d ", level, levelnum)
 			time.Sleep(time.Second * 2)
 
 			secret += 50 
@@ -54,6 +59,7 @@ func main() {
 	}
 			fmt.Println("try again: ")
 			fmt.Scanln(&guess)
+			time.Sleep(time.Second * 1)
 		}
 
 		chance --
