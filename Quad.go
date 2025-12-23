@@ -11,6 +11,7 @@ func Quad(x, y int) {
 		for j := 0; j < y; j++ {
 			if i == 0 && j == 0 {
 				fmt.Print("/")
+				time.Sleep(time.Second * 1)
 			} else if i == 0 && j == y-1 {
 				fmt.Print("\\")
 				time.Sleep(time.Second * 1)
