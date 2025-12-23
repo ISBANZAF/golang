@@ -23,8 +23,12 @@ func main() {
 	fmt.Print("start from any level you wish: ")
 	fmt.Scan(&player.level)
 
+	if player.level < 10 {
+		player.health -= 9.22
+	}
+
 	fmt.Printf("your name is %s\n", player.name)
 	fmt.Printf("your level is %d\n", player.level)
-	fmt.Printf("your health is now %.1f\n", player.health)
+	fmt.Printf("your health is now %.2f\n", player.health)
 	fmt.Printf("are you a hero thou? %v\n", player.hero)
 }
